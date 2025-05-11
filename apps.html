@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VanillaJS | TailwindCSS</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<body class="bg-gray-100">
+    <!-- Desktop Header & Navigation Links-->
+    <header
+        class="sticky z-30 top-2 border border-gray-100 bg-white/75 backdrop-blur-sm rounded-2xl ml-auto mr-auto mt-2 w-[95%] md:w-[85%] px-5 py-3">
+        <nav class="flex justify-between items-center">
+            <!-- logo -->
+            <a href="/index.html">
+                <img class="w-8 h-8" src="/src/assets/logo.png" alt="Logo">
+            </a>
+
+
+            <ul class="hidden md:flex md:ml-auto space-x-1.5 gap-8">
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="customers.html">Customers</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="docs.html">Docs</a></li>
+                <button id="dropdownButton" class="relative focus:outline-none cursor-pointer flex"><a
+                        href="extra.html">Extra</a> <img class="w-5" src="./src/assets/images/down-chevron.png" alt="">
+                    <ul id="dropdownMenu" class="absolute top-10 hidden bg-gray-50 shadow-lg">
+                        <li class="px-4 py-2 hover:bg-gray-100"><a href="support.html">support</a></li>
+                        <li class="px-4 py-2 hover:bg-gray-100"><a href="apps.html">apps</a></li>
+                    </ul>
+                </button>
+            </ul>
+            <div class="space-x-5 ml-auto mr-5 md:mr-5">
+                <button class="bg-gray-300 rounded-md px-2 py-1 cursor-pointer"><a href="login.html">Login</a></button>
+                <button class="bg-[#0e5855] rounded-md px-2 py-1 text-white cursor-pointer"><a
+                        href="register.html">Register</a></button>
+            </div>
+
+            <!-- hamburger menu - Mobile only -->
+            <div class="md:hidden" id="toggleMenu">
+                <img id="menuIcon" class="w-5 cursor-pointer" src="./src/assets/images/menu.png" alt="menu">
+                <img id="closeIcon" class="hidden w-5 cursor-pointer" src="./src/assets/images/cross.png" alt="close">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation Links -->
+    <div id="mobileNav"
+        class="fixed z-30 hidden md:hidden border border-gray-100 bg-white/75 backdrop-blur-sm rounded-2xl ml-5 mr-5 mt-0 w-[95%] px-5 py-2">
+        <ul class="space-y-2 cursor-pointer">
+            <li class="hover:bg-gray-200 px-4 py-1 rounded-md"><a href="pricing.html">Pricing</a></li>
+            <li class="hover:bg-gray-200 px-4 py-1 rounded-md"><a href="customers.html">Customers</a></li>
+            <li class="hover:bg-gray-200 px-4 py-1 rounded-md"><a href="blog.html">Blog</a></li>
+            <li class="hover:bg-gray-200 px-4 py-1 rounded-md"><a href="docs.html">Docs</a></li>
+            <li class="hover:bg-gray-200 px-4 py-1 rounded-md"><a href="support.html">Support</a></li>
+            <li class="hover:bg-gray-200 px-4 py-1 rounded-md"><a href="apps.html">Apps</a></li>
+        </ul>
+    </div>
+
+    <!-- ****** END HEADER ****** -->
+
+    <main>
+
+        <section class="flex justify-center items-center min-h-[300px] bg-[#e1e5ee] px-4 py-12">
+            <div class="relative w-full max-w-5xl rounded-2xl overflow-hidden shadow-2xl bg-[#0f172a]">
+
+                <!-- Content box -->
+                <div class="relative z-10 px-6 py-16 flex flex-col items-center justify-center text-center rounded-2xl">
+                    <h1 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                        Create your next project with <span class="text-white/90">Lorem</span>
+                    </h1>
+                    <button
+                        class="cursor-pointer bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">
+                        Start Free Trial →
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="p-25 text-gray-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
+            <!-- Logo + Copyright -->
+            <div class="space-y-4">
+                <img class="w-8 h-8" src="./src/assets/logo.png" alt="Logo" />
+                <p class="text-sm text-gray-600">© kigen.com — All rights reserved.</p>
+            </div>
+
+            <!-- Product Links -->
+            <div>
+                <h2 class="font-semibold text-base mb-4">Product</h2>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-black">Features</a></li>
+                    <li><a href="#" class="hover:text-black">Integrations</a></li>
+                    <li><a href="#" class="hover:text-black">Pricing & Plans</a></li>
+                    <li><a href="#" class="hover:text-black">Changelog</a></li>
+                    <li><a href="#" class="hover:text-black">Our Method</a></li>
+                </ul>
+            </div>
+
+            <!-- Company Links -->
+            <div>
+                <h2 class="font-semibold text-base mb-4">Company</h2>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-black">About Us</a></li>
+                    <li><a href="#" class="hover:text-black">Diversity & Inclusion</a></li>
+                    <li><a href="#" class="hover:text-black">Blog</a></li>
+                    <li><a href="#" class="hover:text-black">Careers</a></li>
+                    <li><a href="#" class="hover:text-black">Financial Statements</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources Links -->
+            <div>
+                <h2 class="font-semibold text-base mb-4">Resources</h2>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-black">Community</a></li>
+                    <li><a href="#" class="hover:text-black">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-black">Report a Vulnerability</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div>
+                <h2 class="font-semibold text-base mb-4">Social Media</h2>
+                <ul class="flex flex-wrap gap-4">
+                    <li><a href="#"><img class="w-5 h-5" src="./src/assets/icons/twitter.png" alt="Twitter" /></a></li>
+                    <li><a href="#"><img class="w-5 h-5" src="./src/assets/icons/github.png" alt="GitHub" /></a></li>
+                    <li><a href="#"><img class="w-5 h-5" src="./src/assets/icons/behance.png" alt="Behance" /></a></li>
+                    <li><a href="#"><img class="w-5 h-5" src="./src/assets/icons/dribble.png" alt="Dribbble" /></a></li>
+                    <li><a href="#"><img class="w-5 h-5" src="./src/assets/icons/instagram.png" alt="Instagram" /></a>
+                    </li>
+                    <li><a href="#"><img class="w-5 h-5" src="./src/assets/icons/tumblr.png" alt="Tumblr" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- End Document Structure and Styling -->
+
+    <script src="./src/index.js"></script>
+</body>
+
+</html>
